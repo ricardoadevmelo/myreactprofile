@@ -1,5 +1,5 @@
 import React from "react";
-import { LanguageProvider } from "./contexts/LanguageContext";
+import { LanguageProvider } from "./contexts/LanguageContext.js";
 import Header from "./components/Header";
 import ProgressBar from "./components/ProgressBar";
 import LanguageToggle from "./components/LanguageToggle";
