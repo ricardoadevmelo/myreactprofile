@@ -8,7 +8,7 @@ export default {
     solutions. Passionate about innovation and continuous learning, bringing creativity, 
     independence, and strong communication skills to every project.
   `,
-  image: require("/assets/profile.jpg"),
+  image: require("image: "/assets/profile.jpg"),
   location: "Cork, Ireland",
   email: "ricardoadevmelo@gmail.com", 
   phone: "+353-83-056-9070",
