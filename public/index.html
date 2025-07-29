@@ -1,15 +1,64 @@
 <!DOCTYPE html>
-<html lang="pt-BR">
+<html lang="en">
   <head>
     <meta charset="utf-8" />
     <link rel="icon" href="%PUBLIC_URL%/favicon.ico" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta name="theme-color" content="#000000" />
-    <meta
-      name="description"
-      content="Portfolio pessoal de Ricardo Melo - Desenvolvedor Front-End & UX/UI Designer"
-    />
-    <title>Ricardo Melo - Portfolio</title>
+    <meta name="theme-color" content="#0f172a" />
+    
+    <!-- SEO Meta Tags -->
+    <meta name="description" content="Ricardo Melo - Brazilian lawyer with 11+ years experience transitioning to software development. Portfolio showcasing legal expertise and modern web development skills." />
+    <meta name="keywords" content="Ricardo Melo, lawyer, software developer, portfolio, React, JavaScript, legal tech, Cork Ireland" />
+    <meta name="author" content="Ricardo Melo" />
+    <meta name="robots" content="index, follow" />
+    
+    <!-- Open Graph Meta Tags -->
+    <meta property="og:title" content="Ricardo Melo - Lawyer & Software Developer Portfolio" />
+    <meta property="og:description" content="Brazilian lawyer with 11+ years experience transitioning to software development. Based in Cork, Ireland." />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://ricardoadevmelo.netlify.app" />
+    <meta property="og:image" content="%PUBLIC_URL%/assets/profile.jpg" />
+    
+    <!-- Twitter Card Meta Tags -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Ricardo Melo - Lawyer & Software Developer" />
+    <meta name="twitter:description" content="Portfolio showcasing legal expertise and modern web development skills" />
+    <meta name="twitter:image" content="%PUBLIC_URL%/assets/profile.jpg" />
+    
+    <!-- Structured Data for SEO -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Person",
+      "name": "Ricardo Melo",
+      "jobTitle": ["Lawyer", "Software Developer"],
+      "description": "Brazilian lawyer with 11+ years of judicial experience, currently pursuing Systems Analysis and Development",
+      "url": "https://ricardoadevmelo.netlify.app",
+      "image": "%PUBLIC_URL%/assets/profile.jpg",
+      "address": {
+        "@type": "PostalAddress",
+        "addressLocality": "Cork",
+        "addressCountry": "Ireland"
+      },
+      "alumniOf": [
+        {
+          "@type": "EducationalOrganization",
+          "name": "Systems Analysis and Development"
+        }
+      ],
+      "knowsAbout": ["Law", "Web Development", "React", "JavaScript", "Legal Technology"],
+      "workLocation": {
+        "@type": "Place",
+        "address": {
+          "@type": "PostalAddress",
+          "addressLocality": "Cork",
+          "addressCountry": "Ireland"
+        }
+      }
+    }
+    </script>
+    
+    <title>Ricardo Melo - Lawyer & Software Developer Portfolio</title>
     <!-- EmailJS CDN -->
     <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
     <script type="text/javascript">
