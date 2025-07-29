@@ -32,21 +32,27 @@ export default function Header() {
     <header className="fixed w-full bg-dark-bg/95 backdrop-blur-sm border-b border-dark-border z-40 transition-all">
       <nav className="flex items-center justify-between px-6 py-4 max-w-7xl mx-auto">
         <div className="font-bold text-dark-text text-2xl">
-          <a href="#hero" className="text-white hover:text-tech-primary transition" onClick={(e) => handleSmoothScroll(e, 'hero')}>
+          <a 
+            href="#hero" 
+            className="text-white hover:text-tech-primary transition" 
+            onClick={(e) => handleSmoothScroll(e, 'hero')}
+            aria-label="Ricardo Melo - Ir para o início da página"
+          >
             Ricardo Melo
           </a>
         </div>
         
-        <ul className="hidden md:flex gap-8">
+        <ul className="hidden md:flex gap-8" role="navigation" aria-label="Menu principal">
           {navLinks.map(link => (
             <li key={link.to}>
               <a
                 href={link.href}
                 onClick={(e) => handleSmoothScroll(e, link.to)}
                 className="cursor-pointer hover:text-tech-primary transition font-medium text-slate-300 relative group"
+                aria-label={`Navegar para a seção ${language === 'pt' ? link.labelPt : link.label}`}
               >
                 {language === 'pt' ? link.labelPt : link.label}
-                <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-tech-gradient group-hover:w-full transition-all duration-300"></span>
+                <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-tech-gradient group-hover:w-full transition-all duration-300" aria-hidden="true"></span>
               </a>
             </li>
           ))}
@@ -56,18 +62,20 @@ export default function Header() {
           <button 
             onClick={() => setOpen(!open)}
             className="text-slate-300 hover:text-tech-primary transition"
-            aria-label={open ? "Close menu" : "Open menu"}
+            aria-label={open ? "Fechar menu" : "Abrir menu"}
+            aria-expanded={open}
+            aria-controls="mobile-menu"
           >
-            {open ? <X size={28} /> : <Menu size={28} />}
+            {open ? <X size={28} aria-hidden="true" /> : <Menu size={28} aria-hidden="true" />}
           </button>
         </div>
       </nav>
       
       {open && (
-        <div className="md:hidden bg-dark-surface border-t border-dark-border">
-          <ul className="px-6 py-4 space-y-4">
+        <div className="md:hidden bg-dark-surface border-t border-dark-border" id="mobile-menu">
+          <ul className="px-6 py-4 space-y-4" role="menu">
             {navLinks.map(link => (
-              <li key={link.to}>
+              <li key={link.to} role="none">
                 <a
                   href={link.href}
                   onClick={(e) => {
@@ -75,6 +83,8 @@ export default function Header() {
                     setOpen(false);
                   }}
                   className="cursor-pointer hover:text-tech-primary font-medium text-slate-300 block py-2"
+                  role="menuitem"
+                  aria-label={`Navegar para a seção ${language === 'pt' ? link.labelPt : link.label}`}
                 >
                   {language === 'pt' ? link.labelPt : link.label}
                 </a>

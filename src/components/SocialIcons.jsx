@@ -9,6 +9,13 @@ const icons = {
   instagram: <Instagram size={24} />,
 };
 
+const labels = {
+  github: "GitHub - Perfil no GitHub",
+  linkedin: "LinkedIn - Perfil profissional", 
+  mail: "Email - Enviar email",
+  instagram: "Instagram - Perfil no Instagram"
+};
+
 export default function SocialIcons({ variant = "dark" }) {
   const baseClasses = "p-3 rounded-full transition-all duration-300 hover:scale-110";
   const variantClasses = {
@@ -25,6 +32,8 @@ export default function SocialIcons({ variant = "dark" }) {
           target="_blank"
           rel="noopener noreferrer"
           className={`${baseClasses} ${variantClasses[variant]}`}
+          aria-label={labels[type]}
+          title={labels[type]}
         >
           {icons[type]}
         </a>

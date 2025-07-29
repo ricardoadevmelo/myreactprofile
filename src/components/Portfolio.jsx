@@ -129,6 +129,8 @@ export default function Portfolio() {
                       target="_blank"
                       rel="noopener noreferrer"
                       className="bg-law-gradient text-white px-4 py-2 rounded-lg font-medium hover:scale-105 transition-transform"
+                      aria-label={`Ver publicação no ${link.platform}`}
+                      title={`Ver publicação no ${link.platform}`}
                     >
                       {link.platform}
                     </a>
@@ -198,8 +200,10 @@ export default function Portfolio() {
                   target="_blank"
                   rel="noopener noreferrer"
                   className="flex items-center gap-2 text-slate-400 hover:text-tech-primary transition-colors"
+                  aria-label={`Ver código fonte do projeto ${project.title} no GitHub`}
+                  title={`Ver código fonte do projeto ${project.title} no GitHub`}
                 >
-                  <Github size={20} />
+                  <Github size={20} aria-hidden="true" />
                   <span>{text.sourceCode}</span>
                 </a>
                 {project.demo !== "#" && (
@@ -208,8 +212,10 @@ export default function Portfolio() {
                     target="_blank"
                     rel="noopener noreferrer"
                     className="flex items-center gap-2 text-slate-400 hover:text-tech-primary transition-colors"
+                    aria-label={`Ver demonstração do projeto ${project.title}`}
+                    title={`Ver demonstração do projeto ${project.title}`}
                   >
-                    <ExternalLink size={20} />
+                    <ExternalLink size={20} aria-hidden="true" />
                     <span>{text.viewProject}</span>
                   </a>
                 )}
