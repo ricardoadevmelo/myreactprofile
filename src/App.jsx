@@ -1,6 +1,6 @@
 import React from "react";
 import { LanguageProvider } from "./contexts/LanguageContext.js";
-import Header from "./components/Header";
+import Header from "./components/Header2";
 import ProgressBar from "./components/ProgressBar";
 import LanguageToggle from "./components/LanguageToggle";
 import Hero from "./components/Hero";

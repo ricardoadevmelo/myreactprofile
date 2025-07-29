@@ -10,7 +10,7 @@ export default function Education() {
     {
       degree: language === 'pt' ? "Análise e Desenvolvimento de Sistemas" : "Systems Analysis and Development",
       institution: "UNIBF - University Center",
-      period: "2022 - 2024",
+      period: "2023-2025",
       type: "technology",
       icon: <BookOpen size={24} />,
       description: language === 'pt' 
@@ -20,7 +20,7 @@ export default function Education() {
     {
       degree: language === 'pt' ? "Bacharelado em Direito" : "Bachelor's Degree in Law",
       institution: "University of Maurício of Nassau",
-      period: "2008 - 2013",
+      period: "2008-2013",
       type: "law",
       icon: <Award size={24} />,
       description: language === 'pt'
@@ -30,7 +30,7 @@ export default function Education() {
     {
       degree: language === 'pt' ? "Bacharelado em Biologia" : "Bachelor's Degree in Biology",
       institution: "UESPI - State University of Piauí",
-      period: "1995 - 2000",
+      period: "1994 - 1998",
       type: "biology",
       icon: <GraduationCap size={24} />,
       description: language === 'pt'
@@ -40,7 +40,7 @@ export default function Education() {
     {
       degree: language === 'pt' ? "Pós-graduação em Educação Infantil" : "Postgraduate in Early Childhood Education",
       institution: "ANHANGUERA University",
-      period: "2015 - 2016",
+      period: "2025",
       type: "education",
       icon: <Baby size={24} />,
       description: language === 'pt'
@@ -50,7 +50,7 @@ export default function Education() {
     {
       degree: language === 'pt' ? "Curso Geral de Inglês" : "General English Course",
       institution: "ICOT - International College of Technology",
-      period: "2023",
+      period: "2025",
       type: "language",
       icon: <Globe size={24} />,
       description: language === 'pt'
