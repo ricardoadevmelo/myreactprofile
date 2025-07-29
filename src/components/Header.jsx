@@ -1,7 +1,7 @@
 import React from "react";
 import { Link } from "react-scroll";
 import { Menu, X } from "lucide-react";
-import { useLanguage } from "../contexts/LanguageContext";
+import { useLanguage } from "../contexts/LanguageContext.js";
 
 const navLinks = [
   { to: "hero", label: "Home", labelPt: "Início" },

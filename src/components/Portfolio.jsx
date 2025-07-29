@@ -2,7 +2,7 @@ import React from "react";
 import { motion } from "framer-motion";
 import { ExternalLink, Github, ArrowRight, BookOpen } from "lucide-react";
 import { projects, bookPublication } from '../data/projects';
-import { useLanguage } from "../contexts/LanguageContext";
+import { useLanguage } from "../contexts/LanguageContext.js";
 
 export default function Portfolio() {
   const { language } = useLanguage();

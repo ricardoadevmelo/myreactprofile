@@ -1,7 +1,7 @@
 import React from "react";
 import { motion } from "framer-motion";
 import { Code, Palette, Globe, Zap, Users, Scale } from "lucide-react";
-import { useLanguage } from "../contexts/LanguageContext";
+import { useLanguage } from "../contexts/LanguageContext.js";
 
 export default function Services() {
   const { language } = useLanguage();

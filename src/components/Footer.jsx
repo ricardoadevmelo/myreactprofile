@@ -2,7 +2,7 @@ import React from "react";
 import { motion } from "framer-motion";
 import SocialIcons from "./SocialIcons";
 import { ArrowUp, Heart } from "lucide-react";
-import { useLanguage } from "../contexts/LanguageContext";
+import { useLanguage } from "../contexts/LanguageContext.js";
 
 export default function Footer() {
   const { language } = useLanguage();

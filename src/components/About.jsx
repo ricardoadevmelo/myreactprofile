@@ -3,7 +3,7 @@ import about from "../data/about";
 import profileImg from "../assets/profile.jpg";
 import { motion } from "framer-motion";
 import { Award, Users, Coffee, Heart, Code, Scale, GraduationCap, CheckCircle } from "lucide-react";
-import { useLanguage } from "../contexts/LanguageContext";
+import { useLanguage } from "../contexts/LanguageContext.js";
 
 export default function About() {
   const { language } = useLanguage();

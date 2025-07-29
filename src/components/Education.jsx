@@ -1,7 +1,7 @@
 import React from "react";
 import { motion } from "framer-motion";
 import { GraduationCap, Award, BookOpen, Globe, Baby } from "lucide-react";
-import { useLanguage } from "../contexts/LanguageContext";
+import { useLanguage } from "../contexts/LanguageContext.js";
 
 export default function Education() {
   const { language } = useLanguage();
