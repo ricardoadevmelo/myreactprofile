@@ -4,42 +4,50 @@ import { Menu, X } from "lucide-react";
 import { useLanguage } from "../contexts/LanguageContext.js";
 
 const navLinks = [
-  { to: "hero", label: "Home", labelPt: "Início" },
-  { to: "about", label: "About", labelPt: "Sobre" },
-  { to: "education", label: "Education", labelPt: "Educação" },
-  { to: "services", label: "Services", labelPt: "Serviços" },
-  { to: "portfolio", label: "Portfolio", labelPt: "Portfolio" },
-  { to: "experience", label: "Experience", labelPt: "Experiência" },
-  { to: "certifications", label: "Certifications", labelPt: "Certificações" },
-  { to: "contact", label: "Contact", labelPt: "Contato" },
+  { to: "hero", label: "Home", labelPt: "Início", href: "#hero" },
+  { to: "about", label: "About", labelPt: "Sobre", href: "#about" },
+  { to: "education", label: "Education", labelPt: "Educação", href: "#education" },
+  { to: "services", label: "Services", labelPt: "Serviços", href: "#services" },
+  { to: "portfolio", label: "Portfolio", labelPt: "Portfolio", href: "#portfolio" },
+  { to: "experience", label: "Experience", labelPt: "Experiência", href: "#experience" },
+  { to: "certifications", label: "Certifications", labelPt: "Certificações", href: "#certifications" },
+  { to: "contact", label: "Contact", labelPt: "Contato", href: "#contact" },
 ];
 
 export default function Header() {
   const [open, setOpen] = React.useState(false);
   const { language } = useLanguage();
 
+  const handleSmoothScroll = (e, targetId) => {
+    e.preventDefault();
+    const element = document.getElementById(targetId);
+    if (element) {
+      const yOffset = -70; // Header height offset
+      const y = element.getBoundingClientRect().top + window.pageYOffset + yOffset;
+      window.scrollTo({ top: y, behavior: 'smooth' });
+    }
+  };
+
   return (
     <header className="fixed w-full bg-dark-bg/95 backdrop-blur-sm border-b border-dark-border z-40 transition-all">
       <nav className="flex items-center justify-between px-6 py-4 max-w-7xl mx-auto">
         <div className="font-bold text-dark-text text-2xl">
-          <span className="text-white">
+          <a href="#hero" className="text-white hover:text-tech-primary transition" onClick={(e) => handleSmoothScroll(e, 'hero')}>
             Ricardo Melo
-          </span>
+          </a>
         </div>
         
         <ul className="hidden md:flex gap-8">
           {navLinks.map(link => (
             <li key={link.to}>
-              <Link
-                to={link.to}
-                smooth={true}
-                duration={500}
-                offset={-70}
+              <a
+                href={link.href}
+                onClick={(e) => handleSmoothScroll(e, link.to)}
                 className="cursor-pointer hover:text-tech-primary transition font-medium text-slate-300 relative group"
               >
                 {language === 'pt' ? link.labelPt : link.label}
                 <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-tech-gradient group-hover:w-full transition-all duration-300"></span>
-              </Link>
+              </a>
             </li>
           ))}
         </ul>
@@ -48,6 +56,7 @@ export default function Header() {
           <button 
             onClick={() => setOpen(!open)}
             className="text-slate-300 hover:text-tech-primary transition"
+            aria-label={open ? "Close menu" : "Open menu"}
           >
             {open ? <X size={28} /> : <Menu size={28} />}
           </button>
@@ -59,16 +68,16 @@ export default function Header() {
           <ul className="px-6 py-4 space-y-4">
             {navLinks.map(link => (
               <li key={link.to}>
-                <Link
-                  to={link.to}
-                  smooth={true}
-                  duration={500}
-                  offset={-70}
+                <a
+                  href={link.href}
+                  onClick={(e) => {
+                    handleSmoothScroll(e, link.to);
+                    setOpen(false);
+                  }}
                   className="cursor-pointer hover:text-tech-primary font-medium text-slate-300 block py-2"
-                  onClick={() => setOpen(false)}
                 >
                   {language === 'pt' ? link.labelPt : link.label}
-                </Link>
+                </a>
               </li>
             ))}
           </ul>

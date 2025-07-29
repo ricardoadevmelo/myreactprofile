@@ -28,7 +28,7 @@ export default function Hero() {
   const text = content[language];
 
   return (
-    <section className="min-h-screen bg-dark-gradient text-dark-text relative overflow-hidden">
+    <section id="hero" className="min-h-screen bg-dark-gradient text-dark-text relative overflow-hidden">
       {/* Background Pattern with themed colors */}
       <div className="absolute inset-0 opacity-10">
         <div className="absolute top-20 left-20 w-32 h-32 border border-tech-accent rounded-full"></div>
