@@ -101,35 +101,35 @@ export default function About() {
   };
 
   return (
-    <section id="about" className="py-20 bg-dark-bg min-h-screen flex items-center justify-center">
+    <section id="about" className="py-12 md:py-20 bg-dark-bg min-h-screen flex items-center justify-center px-4">
       <div className="w-full max-w-5xl mx-auto flex flex-col items-center justify-center">
         {/* Header */}
         <motion.div
           initial={{ opacity: 0, y: 40 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8 }}
-          className="text-center mb-12 w-full"
+          className="text-center mb-8 md:mb-12 w-full"
         >
-          <h2 className="text-4xl md:text-5xl font-bold text-dark-text mb-6">
+          <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-dark-text mb-4 md:mb-6">
             {text.title}
           </h2>
-          <p className="text-xl text-slate-400 max-w-4xl mx-auto">
+          <p className="text-lg md:text-xl text-slate-400 max-w-4xl mx-auto px-4">
             {text.subtitle}
           </p>
         </motion.div>
 
-        <div className="flex flex-col lg:flex-row gap-8 items-center justify-center w-full">
+        <div className="flex flex-col lg:flex-row gap-6 md:gap-8 items-center justify-center w-full">
           {/* Image Side */}
           <motion.div
             initial={{ opacity: 0, x: -40 }}
             whileInView={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.8 }}
-            className="flex justify-center items-center"
+            className="flex justify-center items-center w-full lg:w-auto"
           >
             <img
               src={profileImg}
               alt={about.name}
-              className="w-[400px] h-[520px] rounded-2xl shadow-2xl object-cover mx-auto"
+              className="w-72 h-96 sm:w-80 sm:h-[420px] md:w-[350px] md:h-[460px] lg:w-[400px] lg:h-[520px] rounded-2xl shadow-2xl object-cover mx-auto"
             />
           </motion.div>
 
@@ -138,23 +138,23 @@ export default function About() {
             initial={{ opacity: 0, x: 40 }}
             whileInView={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.8, delay: 0.2 }}
-            className="flex flex-col justify-center h-full w-full max-w-xl items-start"
+            className="flex flex-col justify-center h-full w-full lg:max-w-xl items-start px-4 lg:px-0"
           >
-            <h3 className="text-2xl font-bold text-dark-text mb-4 text-left max-w-lg">
+            <h3 className="text-xl md:text-2xl font-bold text-dark-text mb-4 text-left w-full">
               {text.aboutSubtitle}
             </h3>
-            <div className="text-lg text-slate-300 space-y-4 mb-8 leading-relaxed text-justify max-w-lg">
+            <div className="text-base md:text-lg text-slate-300 space-y-4 mb-6 md:mb-8 leading-relaxed text-justify w-full">
               <p>{text.aboutDescription}</p>
-              <div className="bg-dark-card border border-dark-border p-6 rounded-xl w-full max-w-lg">
-                <h4 className="font-semibold text-dark-text mb-4 flex items-center gap-2 justify-start">
-                  <Users size={20} />
+              <div className="bg-dark-card border border-dark-border p-4 md:p-6 rounded-xl w-full">
+                <h4 className="font-semibold text-dark-text mb-4 flex items-center gap-2 justify-start text-sm md:text-base">
+                  <Users size={16} className="md:w-5 md:h-5" />
                   {text.professionalCharacteristics}
                 </h4>
                 <ul className="space-y-2 text-left">
                   {text.traits.map((trait, index) => (
-                    <li key={index} className="flex items-center gap-2 text-slate-300">
-                      <CheckCircle size={16} className="text-tech-primary mt-1 flex-shrink-0" />
-                      <span className="text-sm text-justify">{trait}</span>
+                    <li key={index} className="flex items-start gap-2 text-slate-300">
+                      <CheckCircle size={14} className="md:w-4 md:h-4 text-tech-primary mt-1 flex-shrink-0" />
+                      <span className="text-xs md:text-sm text-justify leading-relaxed">{trait}</span>
                     </li>
                   ))}
                 </ul>
@@ -168,22 +168,22 @@ export default function About() {
           initial={{ opacity: 0, y: 40 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8 }}
-          className="mb-20 mt-20"
+          className="mb-12 md:mb-20 mt-12 md:mt-20 w-full px-4"
         >
-          <h3 className="text-3xl font-bold text-dark-text mb-12 text-center">
+          <h3 className="text-2xl md:text-3xl font-bold text-dark-text mb-8 md:mb-12 text-center">
             {text.skillsTitle}
           </h3>
           
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-4 md:gap-8">
             {/* Technology Skills */}
-            <div className="bg-tech-gradient p-8 rounded-2xl text-white shadow-lg">
-              <div className="flex items-center gap-3 mb-6">
-                <Code size={32} />
-                <h4 className="text-xl font-bold">{text.technology}</h4>
+            <div className="bg-tech-gradient p-6 md:p-8 rounded-2xl text-white shadow-lg">
+              <div className="flex items-center gap-3 mb-4 md:mb-6">
+                <Code size={24} className="md:w-8 md:h-8" />
+                <h4 className="text-lg md:text-xl font-bold">{text.technology}</h4>
               </div>
               <div className="flex flex-wrap gap-2">
                 {skills.technology.map((skill, index) => (
-                  <span key={index} className="bg-white/20 px-3 py-1 rounded-full text-sm">
+                  <span key={index} className="bg-white/20 px-2 md:px-3 py-1 rounded-full text-xs md:text-sm">
                     {skill}
                   </span>
                 ))}
@@ -191,14 +191,14 @@ export default function About() {
             </div>
 
             {/* Law Skills */}
-            <div className="bg-law-gradient p-8 rounded-2xl text-dark-bg shadow-lg">
-              <div className="flex items-center gap-3 mb-6">
-                <Scale size={32} />
-                <h4 className="text-xl font-bold">{text.law}</h4>
+            <div className="bg-law-gradient p-6 md:p-8 rounded-2xl text-dark-bg shadow-lg">
+              <div className="flex items-center gap-3 mb-4 md:mb-6">
+                <Scale size={24} className="md:w-8 md:h-8" />
+                <h4 className="text-lg md:text-xl font-bold">{text.law}</h4>
               </div>
               <div className="flex flex-wrap gap-2">
                 {skills.law.map((skill, index) => (
-                  <span key={index} className="bg-black/20 px-3 py-1 rounded-full text-sm">
+                  <span key={index} className="bg-black/20 px-2 md:px-3 py-1 rounded-full text-xs md:text-sm">
                     {skill}
                   </span>
                 ))}
@@ -206,14 +206,14 @@ export default function About() {
             </div>
 
             {/* Education Skills */}
-            <div className="bg-edu-gradient p-8 rounded-2xl text-dark-bg shadow-lg">
-              <div className="flex items-center gap-3 mb-6">
-                <GraduationCap size={32} />
-                <h4 className="text-xl font-bold">{text.education}</h4>
+            <div className="bg-edu-gradient p-6 md:p-8 rounded-2xl text-dark-bg shadow-lg">
+              <div className="flex items-center gap-3 mb-4 md:mb-6">
+                <GraduationCap size={24} className="md:w-8 md:h-8" />
+                <h4 className="text-lg md:text-xl font-bold">{text.education}</h4>
               </div>
               <div className="flex flex-wrap gap-2">
                 {skills.education.map((skill, index) => (
-                  <span key={index} className="bg-black/20 px-3 py-1 rounded-full text-sm">
+                  <span key={index} className="bg-black/20 px-2 md:px-3 py-1 rounded-full text-xs md:text-sm">
                     {skill}
                   </span>
                 ))}
@@ -227,17 +227,17 @@ export default function About() {
           initial={{ opacity: 0, y: 40 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.4 }}
-          className="grid grid-cols-2 md:grid-cols-4 gap-8"
+          className="grid grid-cols-2 md:grid-cols-4 gap-4 md:gap-8 w-full px-4"
         >
           {stats.map((stat, index) => (
-            <div key={index} className="text-center bg-dark-card border border-dark-border p-6 rounded-xl">
-              <div className="flex justify-center mb-4">
+            <div key={index} className="text-center bg-dark-card border border-dark-border p-4 md:p-6 rounded-xl">
+              <div className="flex justify-center mb-2 md:mb-4">
                 {stat.icon}
               </div>
-              <div className="text-3xl font-bold text-dark-text mb-2">
+              <div className="text-2xl md:text-3xl font-bold text-dark-text mb-1 md:mb-2">
                 {stat.number}
               </div>
-              <div className="text-slate-400 text-sm">
+              <div className="text-slate-400 text-xs md:text-sm">
                 {stat.label}
               </div>
             </div>
