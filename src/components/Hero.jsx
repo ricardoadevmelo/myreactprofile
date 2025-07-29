@@ -11,7 +11,7 @@ export default function Hero() {
       greeting: "Hi, I'm",
       role: "Lawyer & Software Developer",
       subtitle: "Systems Analysis and Development Graduate | Law Graduate | Education Specialist",
-      description: "Brazilian lawyer based in Cork, Ireland. Graduate in Systems Analysis and Development, currently pursuing postgraduate studies in Early Childhood Education. Combines 11 years of legal experience with technological innovation and educational methodologies to create transformative and impactful solutions.",
+      description: "Brazilian lawyer with a strong background in the judicial field, holding a degree in Systems Analysis and Development and currently pursuing postgraduate studies in Early Childhood Education. Based in Cork, Ireland, blending legal expertise with technological innovation and progressive educational methodologies. A results-driven professional known for creativity, autonomy, and excellent communication skills, committed to turning ideas into impactful, real-world solutions.",
       cta: "Get In Touch",
       scroll: "Scroll Down"
     },
@@ -19,7 +19,7 @@ export default function Hero() {
       greeting: "Olá, eu sou",
       role: "Advogado & Desenvolvedor de Software",
       subtitle: "Tecnólogo em Análise e Desenvolvimento de Sistemas | Bacharel em Direito | Especialista em Educação",
-      description: "Advogado brasileiro residindo em Cork, Irlanda. Formado em Análise e Desenvolvimento de Sistemas e cursando pós-graduação em Educação Infantil. Combina 11 anos de experiência jurídica com inovação tecnológica e metodologias educacionais para criar soluções transformadoras e impactantes.",
+      description: "Advogado brasileiro com sólida atuação na área jurídica, graduado em Análise e Desenvolvimento de Sistemas e atualmente cursando pós-graduação em Educação Infantil. Residente em Cork, Irlanda, une conhecimentos jurídicos consolidados à inovação tecnológica e a metodologias educacionais contemporâneas. Profissional focado em resultados, com perfil criativo, autônomo e excelente comunicação, comprometido em transformar ideias em soluções relevantes e impactantes.",
       cta: "Entre em Contato",
       scroll: "Role para Baixo"
     }

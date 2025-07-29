@@ -18,7 +18,7 @@ export default function About() {
       law: "Law",
       education: "Education",
       aboutSubtitle: "Systems Analysis and Development Graduate | Law Graduate | Education Specialist",
-      aboutDescription: "Brazilian lawyer with 11 years of judicial experience, graduated in Systems Analysis and Development and currently pursuing postgraduate studies in Early Childhood Education. Based in Cork, Ireland, combines established legal expertise with technological innovation and advanced educational methodologies. A professional dedicated to excellence, bringing creativity, autonomy, and exceptional communication skills to transform ideas into impactful solutions.",
+      aboutDescription: "Brazilian lawyer with a strong background in the judicial field, holding a degree in Systems Analysis and Development and currently pursuing postgraduate studies in Early Childhood Education. Based in Cork, Ireland, blending legal expertise with technological innovation and progressive educational methodologies. A results-driven professional known for creativity, autonomy, and excellent communication skills, committed to turning ideas into impactful, real-world solutions.",
       traits: [
         "Creative and innovative: Enjoys exploring new ideas and solutions",
         "Motivational: Inspires colleagues with enthusiasm and positive outlook", 
@@ -38,7 +38,7 @@ export default function About() {
       law: "Direito",
       education: "Educação",
       aboutSubtitle: "Tecnólogo em Análise e Desenvolvimento de Sistemas | Bacharel em Direito | Especialista em Educação",
-      aboutDescription: "Advogado brasileiro com 11 anos de experiência judicial, formado em Análise e Desenvolvimento de Sistemas e atualmente cursando pós-graduação em Educação Infantil. Residindo em Cork, Irlanda, combina expertise jurídica consolidada com inovação tecnológica e metodologias educacionais avançadas. Profissional dedicado à excelência, trazendo criatividade, autonomia e excepcionais habilidades de comunicação para transformar ideias em soluções impactantes.",
+      aboutDescription: "Advogado brasileiro com sólida atuação na área jurídica, graduado em Análise e Desenvolvimento de Sistemas e atualmente cursando pós-graduação em Educação Infantil. Residente em Cork, Irlanda, une conhecimentos jurídicos consolidados à inovação tecnológica e a metodologias educacionais contemporâneas. Profissional focado em resultados, com perfil criativo, autônomo e excelente comunicação, comprometido em transformar ideias em soluções relevantes e impactantes.",
       traits: [
         "Criativo e inovador - Gosta de explorar novas ideias e soluções",
         "Motivacional – Inspira colegas com entusiasmo e perspectiva positiva",
