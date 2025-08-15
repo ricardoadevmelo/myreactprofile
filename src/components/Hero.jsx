@@ -9,7 +9,7 @@ export default function Hero() {
   const content = {
     en: {
       greeting: "Hi, I'm",
-      role: "Lawyer & Software Developer",
+      role: "Education Specialist, Software Developer & Lawyer",
       subtitle: "Systems Analysis and Development Graduate | Law Graduate | Education Specialist",
       description: "Brazilian lawyer with a strong background in the judicial field, holding a degree in Systems Analysis and Development and currently pursuing postgraduate studies in Early Childhood Education. Based in Cork, Ireland, blending legal expertise with technological innovation and progressive educational methodologies. A results-driven professional known for creativity, autonomy, and excellent communication skills, committed to turning ideas into impactful, real-world solutions.",
       cta: "Get In Touch",
@@ -17,7 +17,7 @@ export default function Hero() {
     },
     pt: {
       greeting: "Olá, eu sou",
-      role: "Advogado & Desenvolvedor de Software",
+      role: "Especialista em Educação, Desenvolvedor de Software & Advogado",
       subtitle: "Tecnólogo em Análise e Desenvolvimento de Sistemas | Bacharel em Direito | Especialista em Educação",
       description: "Advogado brasileiro com sólida atuação na área jurídica, graduado em Análise e Desenvolvimento de Sistemas e atualmente cursando pós-graduação em Educação Infantil. Residente em Cork, Irlanda, une conhecimentos jurídicos consolidados à inovação tecnológica e a metodologias educacionais contemporâneas. Profissional focado em resultados, com perfil criativo, autônomo e excelente comunicação, comprometido em transformar ideias em soluções relevantes e impactantes.",
       cta: "Entre em Contato",
@@ -141,3 +141,4 @@ export default function Hero() {
     </section>
   );
 }
+
